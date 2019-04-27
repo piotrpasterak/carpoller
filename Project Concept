@@ -1,0 +1,21 @@
+Opis problemu jaki rozwiązuje aplikacja:
+
+Ludzie często dojeżdżają do pracy z innego miasta (np. z Tarnowa do Krakowa). 
+Aby zminimalizować koszty (koledzy z pracy czy znajomi) łączą się w grupy i jadą jednym samochodem. 
+I tak się zmieniają, w miarę możliwości żeby za każdym razem jechał ktoś inny. 
+Jest to niezwykle ważne ponieważ rozliczanie przejazdów jest barterowe (dziś jadę ja, jutro ty itd..). 
+Ale po jakimś czasie trudno nad tym zapanować (kto ile razy już jechał, coś komuś wypadnie i nie pojedzie, 
+innym razem jest się na urlopie/delegacji i nie korzysta się z przejazdu grupowego). 
+Jest też problem ze sprawiedliwym rozdzieleniem ilości przejazdów aby każdy w skali miesiąca / roku był równomiernie obciążony kosztami przejazdów. 
+
+Podstawowa funkcjonalność aplikacji:
+	- Logowanie
+	- W dzień poprzedzający wyjazd około godziny 19 wysyłane jest przypomnienie kto jest kierowcą a kto pasażerem
+	- Algorytm sam typuje kto będzie kierowcą w dniu następny (bierze pod uwagę takie zmienne jak: ilość zrealizowanych przejazdów jako pasażer i kierowca, urlopy, choroba i inne)
+	- Jeśli w ciągu 1,5 godziny nie nastąpi akceptacja kierowcy i pasażerów to wysyłane jest kolejne powiadomienie do innego potencjalnego kierowcy i oczekiwanie 1h na potwierdzenie. 
+	- Informacja o stanie zapełnienia pojadu
+	- Po każdym przejeździe uczestnicy potwierdzają uczestnictwo wybierając właściwą opcję pasażer/kierowca co jest potwierdzeniem że wszystko odbyło się zgodnie z planem
+	- Powiadamianie o nagłych zmianach (choroba, urlop, awaria samochodu)
+	- Harmonogramy umożliwiający wybór konkretnych dni w których chce się być kierowcą/pasażerem
+  
+Za pomocą kolorów każda z osób w łatwy sposób jest oznaczana pod kątem ilości przejazdów, osoby z kolorem czerwonym będą priorytetowo wyznaczane na kierowców
