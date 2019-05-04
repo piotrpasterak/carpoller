@@ -1,0 +1,20 @@
+{
+  "generator-ngx-rocket": {
+    "version": "6.0.2",
+    "props": {
+      "location": "path",
+      "appName": " Carpooler",
+      "target": ["cordova"],
+      "mobile": ["ios", "android"],
+      "ui": "bootstrap",
+      "auth": true,
+      "lazy": false,
+      "angulartics": false,
+      "tools": ["prettier", "hads", "compodoc"],
+      "utility": [],
+      "projectName": "carpooler",
+      "packageManager": "npm",
+      "desktop": []
+    }
+  }
+}
