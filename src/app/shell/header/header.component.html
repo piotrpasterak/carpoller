@@ -1,6 +1,6 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="https://github.com/ngx-rocket" translate>APP_NAME</a>
+    <a class="navbar-brand" href="https://github.com/piotrpasterak/carpooler" translate>APP_NAME</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -14,8 +14,12 @@
     <div id="navbar-menu" class="collapse navbar-collapse float-xs-none" [ngbCollapse]="menuHidden">
       <div class="navbar-nav">
         <a class="nav-item nav-link text-uppercase" routerLink="/home" routerLinkActive="active">
-          <i class="fas fa-home"></i>
+          <i class="fas fa-users"></i>
           <span translate>Home</span>
+        </a>
+        <a class="nav-item nav-link text-uppercase" routerLink="/info" routerLinkActive="active">
+          <i class="fas fa-info-circle"></i>
+          <span translate>Settings</span>
         </a>
         <a class="nav-item nav-link text-uppercase" routerLink="/about" routerLinkActive="active">
           <i class="fas fa-question-circle"></i>
