@@ -20,6 +20,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire';
+import { RegisterModule } from './register/register.module';
 
 @NgModule({
   imports: [
@@ -35,6 +36,7 @@ import { AngularFireModule } from '@angular/fire';
     HomeModule,
     AboutModule,
     LoginModule,
+    RegisterModule,
     InfoModule,
     AngularFireModule,
     AngularFireAuthModule,

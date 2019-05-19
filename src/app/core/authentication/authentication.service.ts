@@ -58,4 +58,15 @@ export class AuthenticationService {
     this.credentialsService.setCredentials();
     return of(true);
   }
+
+  async register(context: RegisterContext) {
+    return await this.fireAuth.auth
+      .createUserWithEmailAndPassword(context.email, context.password)
+      .then(() => {
+        this.login({ username: context.email, password: context.password }).then(() => {
+          window.alert('You have been successfully registered.');
+        });
+      })
+      .catch(error => window.alert(error.message));
+  }
 }
