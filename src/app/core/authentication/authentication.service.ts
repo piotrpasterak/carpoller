@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
+import { AngularFireAuth } from '@angular/fire/auth';
+import { User } from 'firebase';
+import { AngularFireModule } from '@angular/fire';
+import { Router } from '@angular/router';
 import { Credentials, CredentialsService } from './credentials.service';
 
 export interface LoginContext {
@@ -9,27 +13,40 @@ export interface LoginContext {
   remember?: boolean;
 }
 
+export interface RegisterContext {
+  email: string;
+  password: string;
+}
+
 /**
  * Provides a base for authentication workflow.
  * The login/logout methods should be replaced with proper implementation.
  */
 @Injectable()
 export class AuthenticationService {
-  constructor(private credentialsService: CredentialsService) {}
+  constructor(
+    private credentialsService: CredentialsService,
+    private fireAuth: AngularFireAuth,
+    public router: Router
+  ) {}
 
   /**
    * Authenticates the user.
    * @param context The login parameters.
    * @return The user credentials.
    */
-  login(context: LoginContext): Observable<Credentials> {
-    // Replace by proper authentication call
-    const data = {
-      username: context.username,
-      token: '123456'
-    };
-    this.credentialsService.setCredentials(data, context.remember);
-    return of(data);
+  async login(context: LoginContext) {
+    if (this.credentialsService.isAuthenticated()) {
+      return;
+    }
+
+    await this.fireAuth.auth.signInWithEmailAndPassword(context.username, context.password).then(x => {
+      const data = {
+        username: context.username,
+        token: '123456'
+      };
+      this.credentialsService.setCredentials(data, context.remember);
+    });
   }
 
   /**

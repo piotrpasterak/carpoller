@@ -37,23 +37,17 @@ export class LoginComponent implements OnInit, OnDestroy {
     this.isLoading = true;
     const login$ = this.authenticationService.login(this.loginForm.value);
     login$
-      .pipe(
-        finalize(() => {
-          this.loginForm.markAsPristine();
-          this.isLoading = false;
-        }),
-        untilDestroyed(this)
-      )
-      .subscribe(
-        credentials => {
-          log.debug(`${credentials.username} successfully logged in`);
-          this.router.navigate([this.route.snapshot.queryParams.redirect || '/'], { replaceUrl: true });
-        },
-        error => {
-          log.debug(`Login error: ${error}`);
-          this.error = error;
-        }
-      );
+      .then(() => {
+        this.loginForm.markAsPristine();
+        this.isLoading = false;
+        untilDestroyed(this);
+        this.router.navigate([this.route.snapshot.queryParams.redirect || '/'], { replaceUrl: true });
+      })
+      .catch(err => {
+        this.isLoading = false;
+        this.error = err;
+        console.log(err.message);
+      });
   }
 
   setLanguage(language: string) {
