@@ -15,7 +15,16 @@ export const environment = {
   version: env.npm_package_version + '-dev',
   serverUrl: '/api',
   defaultLanguage: 'en-US',
-  supportedLanguages: ['en-US', 'fr-FR']
+  supportedLanguages: ['en-US', 'fr-FR'],
+  firebaseConfig: {
+    apiKey: 'AIzaSyAC9POPNO4FDdyUuCtly2NqJkNXu8zEbeA',
+    authDomain: 'carpooler-f695d.firebaseapp.com',
+    databaseURL: 'https://carpooler-f695d.firebaseio.com',
+    projectId: 'carpooler-f695d',
+    storageBucket: 'carpooler-f695d.appspot.com',
+    messagingSenderId: '694133278717',
+    appId: '1:694133278717:web:9c5cb0a155882731'
+  }
 };
 
 /*
