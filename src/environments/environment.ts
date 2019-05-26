@@ -17,13 +17,13 @@ export const environment = {
   defaultLanguage: 'en-US',
   supportedLanguages: ['en-US', 'fr-FR'],
   firebaseConfig: {
-    apiKey: 'AIzaSyAC9POPNO4FDdyUuCtly2NqJkNXu8zEbeA',
-    authDomain: 'carpooler-f695d.firebaseapp.com',
-    databaseURL: 'https://carpooler-f695d.firebaseio.com',
-    projectId: 'carpooler-f695d',
-    storageBucket: 'carpooler-f695d.appspot.com',
-    messagingSenderId: '694133278717',
-    appId: '1:694133278717:web:9c5cb0a155882731'
+    apiKey: 'AIzaSyCcfmLG2y1ylNQYiFlw2eu_4vRTBFCl7Oo',
+    authDomain: 'carpooler-7e16a.firebaseapp.com',
+    databaseURL: 'https://carpooler-7e16a.firebaseio.com',
+    projectId: 'carpooler-7e16a',
+    storageBucket: 'carpooler-7e16a.appspot.com',
+    messagingSenderId: '799878032074',
+    appId: '1:799878032074:web:24881fb85fa1946c'
   }
 };
 
