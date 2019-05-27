@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Carpooler</title>
+    <base href="./" />
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="theme-color" content="#4e8ef7" />
+    <link rel="stylesheet" href="styles.a1962c3e9bad2fdebb4a.css" />
+  </head>
+
+  <body>
+    <!-- Include Cordova script only when needed -->
+    <script>
+      if (/^app/.test(location.host)) {
+        /**
+         * https://github.com/angular/angular/issues/22509
+         * Prevent cordova.js 5.2.4+ routing bug
+         **/
+        window.addEventListener = function() {
+          EventTarget.prototype.addEventListener.apply(this, arguments);
+        };
+        window.removeEventListener = function() {
+          EventTarget.prototype.removeEventListener.apply(this, arguments);
+        };
+        document.addEventListener = function() {
+          EventTarget.prototype.addEventListener.apply(this, arguments);
+        };
+        document.removeEventListener = function() {
+          EventTarget.prototype.removeEventListener.apply(this, arguments);
+        };
+        document.write('<script src="cordova.js"><\/script>');
+      }
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <app-root></app-root>
+    <script type="text/javascript" src="runtime.26209474bfa8dc87a77c.js"></script
+    ><script type="text/javascript" src="polyfills.823a978cc55676550b9c.js"></script
+    ><script type="text/javascript" src="main.d889c6cc4650e1c1ab94.js"></script>
+  </body>
+</html>

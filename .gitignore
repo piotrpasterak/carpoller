@@ -9,9 +9,9 @@
 /node_modules
 
 # Cordova
-/www
-/plugins
-/platforms
+#/www
+#/plugins
+#/platforms
 
 # Electron
 /dist.electron
