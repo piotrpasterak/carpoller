@@ -5,6 +5,14 @@
   background-color: $blue;
 }
 
+.navbar-name {
+  padding: 0;
+  margin-bottom: 0;
+  color: white;
+  text-align: center;
+  font-style: italic;
+}
+
 .nav-link.dropdown-toggle {
   cursor: pointer;
 }

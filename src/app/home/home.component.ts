@@ -12,6 +12,9 @@ export class HomeComponent implements OnInit {
   quote: string | undefined;
   isLoading = false;
 
+  public activities = ['Driver', 'Passenger', 'Without Me', 'In baggage compartment'];
+  public status = 'User activity';
+
   constructor(private quoteService: QuoteService) {}
 
   ngOnInit() {

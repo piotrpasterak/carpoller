@@ -18,6 +18,11 @@
   min-height: 100%;
 }
 
+.register-img-fit {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .ng-invalid.ng-touched:not(form) {
   border-left: 4px solid theme-color("danger");
 }

@@ -1,6 +1,18 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" href="https://github.com/piotrpasterak/carpooler" translate>Menu</a>
+    <div class="nav-item" ngbDropdown placement="bottom-left">
+      <a id="user-dropdown" class="nav-link" ngbDropdownToggle>
+        <i class="fas fa-sign-out-alt"></i>
+      </a>
+      <div ngbDropdownMenu aria-labelledby="user-dropdown">
+        <h6 class="dropdown-header">
+          <span translate>Logged in as</span> <b>{{ username }}</b>
+        </h6>
+        <div class="dropdown-divider"></div>
+        <button class="dropdown-item" (click)="logout()" translate>Logout</button>
+      </div>
+    </div>
+    <h4 class="navbar-name text-center">CARPOOL</h4>
     <button
       class="navbar-toggler"
       type="button"
@@ -33,18 +45,6 @@
             <button class="dropdown-item" *ngFor="let language of languages" (click)="setLanguage(language)">
               {{ language }}
             </button>
-          </div>
-        </div>
-        <div class="nav-item" ngbDropdown placement="bottom-left">
-          <a id="user-dropdown" class="nav-link" ngbDropdownToggle>
-            <i class="fas fa-user-circle"></i>
-          </a>
-          <div ngbDropdownMenu aria-labelledby="user-dropdown">
-            <h6 class="dropdown-header">
-              <span translate>Logged in as</span> <b>{{ username }}</b>
-            </h6>
-            <div class="dropdown-divider"></div>
-            <button class="dropdown-item" (click)="logout()" translate>Logout</button>
           </div>
         </div>
       </div>

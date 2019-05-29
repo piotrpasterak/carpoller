@@ -4,7 +4,7 @@
       <div class="card col-md-6 mt-3 mx-auto">
         <div class="card-body">
           <h4 class="card-title text-center">CARPOOLER</h4>
-          <i class="register-img"><img src="assets/img/corvette.jpg"/></i>
+          <i><img src="assets/img/corvette.jpg" class="login-img-fit"/></i>
           <form (ngSubmit)="login()" [formGroup]="loginForm" novalidate>
             <div class="alert alert-danger" [hidden]="!error || isLoading" translate>
               Username or password incorrect.
