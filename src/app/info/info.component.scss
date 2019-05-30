@@ -1,14 +1,21 @@
-.info-table {
-  margin: auto;
-  width: 100%;
-}
-
-.info-cell {
-  padding: 15px;
-  border: 1px;
-}
-
 .info-button {
-  width: 150px;
-  height: 50px;
+  width: 130px;
+  height: 130px;
+  margin: 1px;
+  border: 2px solid white;
+  border-radius: 4px;
+  background-color: #0073dd;
+  box-shadow: 3px 3px 3px #ccc;
+}
+
+.text {
+  color: white;
+  margin: 15px auto 0px auto;
+  font-size: 14pt;
+  text-align: center;
+  font-family: Arial;
+}
+
+.info-table {
+  margin: 50px;
 }

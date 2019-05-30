@@ -1,8 +1,8 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="nav-item" ngbDropdown placement="bottom-left">
-      <a id="user-dropdown" class="nav-link" ngbDropdownToggle>
-        <i class="fas fa-sign-out-alt"></i>
+      <a class="nav-item nav-link" routerLink="/login" routerLinkActive="active">
+        <i class="far fa-sign-out-alt"></i>
       </a>
       <div ngbDropdownMenu aria-labelledby="user-dropdown">
         <h6 class="dropdown-header">
@@ -26,15 +26,15 @@
     <div id="navbar-menu" class="collapse navbar-collapse float-xs-none" [ngbCollapse]="menuHidden">
       <div class="navbar-nav">
         <a class="nav-item nav-link" routerLink="/home" routerLinkActive="active">
-          <i class="fas fa-users"></i>
+          <i class="far fa-users"></i>
           <span translate>Next trip</span>
         </a>
         <a class="nav-item nav-link" routerLink="/info" routerLinkActive="active">
-          <i class="fas fa-info-circle"></i>
-          <span translate>Details</span>
+          <i class="far fa-info-circle"></i>
+          <span translate>Planner</span>
         </a>
         <a class="nav-item nav-link" routerLink="/about" routerLinkActive="active">
-          <i class="fas fa-question-circle"></i>
+          <i class="far fa-question-circle"></i>
           <span translate>About</span>
         </a>
       </div>
@@ -51,3 +51,6 @@
     </div>
   </nav>
 </header>
+<footer>
+  <div class="footer"></div>
+</footer>
