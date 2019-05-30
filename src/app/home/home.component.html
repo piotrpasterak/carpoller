@@ -1,127 +1,225 @@
 <div class="container-fluid">
   <div class="jumbotron text-center">
-    <img src="assets/img/hyundai.jpg" class="home-img-fit" />
-    <h1 class="border-bottom border-gray pb-2 mb-0">Trip:</h1>
+    <div>
+      <h1>Next trip:</h1>
+    </div>
+    <div>
+      <img src="assets/img/hyundai.jpg" class="home-img-fit" />
+    </div>
+
+    <!-- 1st participant -->
+    <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray"></div>
     <div class="media text-muted pt-3">
-      <svg
-        class="bd-placeholder-img mr-16 rounded"
-        width="32"
-        height="32"
-        xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="xMidYMid slice"
-        focusable="false"
-        role="img"
-        aria-label="Placeholder: 32x32"
-      >
-        <title>Placeholder</title>
-        <rect width="100%" height="100%" fill="#007bff"></rect>
-        <text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
-      </svg>
       <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-        <div class="d-flex justify-content-between align-items-center w-100">
-          <strong class="text-gray-dark">User1</strong>
-          <div class="custom-control custom-switch">
-            <input type="checkbox" class="custom-control-input" id="customSwitches1" />
-            <label class="custom-control-label" for="customSwitches1"></label>
-          </div>
-        </div>
-        <button
-          class="btn btn-secondary btn-sm dropdown-toggle"
-          type="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-          {{ status }}
-        </button>
-        <div class="dropdown-menu">
-          <a *ngFor="let activity of activities" class="dropdown-item">{{ activity }}</a>
-        </div>
+        <table style="width:100%">
+          <tr>
+            <th>
+              <!-- avatar -->
+              <svg
+                class="bd-placeholder-img mr-16 rounded"
+                width="32"
+                height="32"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+                role="img"
+                aria-label="Placeholder: 32x32"
+              >
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#007bff"></rect>
+                <text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
+              </svg>
+            </th>
+            <th>
+              <!--user name-->
+              <strong class="text-gray-dark">User name</strong>
+            </th>
+            <th>
+              <!--user activity-->
+              <button
+                class="btn btn-secondary btn-sm dropdown-toggle"
+                type="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                {{ status }}
+              </button>
+              <div class="dropdown-menu">
+                <a *ngFor="let activity of activities" class="dropdown-item">{{ activity }}</a>
+              </div>
+            </th>
+            <th>
+              <!--user switch-->
+              <a class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitches1" />
+                <label class="custom-control-label" for="customSwitches1"></label>
+              </a>
+            </th>
+          </tr>
+        </table>
       </div>
     </div>
 
+    <!-- 2nd participant -->
     <div class="media text-muted pt-3">
-      <svg
-        class="bd-placeholder-img mr-2 rounded"
-        width="32"
-        height="32"
-        xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="xMidYMid slice"
-        focusable="false"
-        role="img"
-        aria-label="Placeholder: 32x32"
-      >
-        <title>Placeholder</title>
-        <rect width="100%" height="100%" fill="#007bff"></rect>
-        <text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
-      </svg>
       <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-        <div class="d-flex justify-content-between align-items-center w-100">
-          <strong class="text-gray-dark">User2</strong>
-          <div class="custom-control custom-switch">
-            <input type="checkbox" class="custom-control-input" id="customSwitches3" />
-            <label class="custom-control-label" for="customSwitches3"></label>
-          </div>
-        </div>
-        <div class="btn-group">
-          <button
-            class="btn btn-secondary btn-sm dropdown-toggle"
-            type="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            {{ status }}
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item">Driver</a>
-            <a class="dropdown-item">Passenger</a>
-            <a class="dropdown-item">Without me</a>
-          </div>
-        </div>
+        <table style="width:100%">
+          <tr>
+            <th>
+              <!-- avatar -->
+              <svg
+                class="bd-placeholder-img mr-16 rounded"
+                width="32"
+                height="32"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+                role="img"
+                aria-label="Placeholder: 32x32"
+              >
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#007bff"></rect>
+                <text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
+              </svg>
+            </th>
+            <th>
+              <!--user name-->
+              <strong class="text-gray-dark">User name</strong>
+            </th>
+            <th>
+              <!--user activity-->
+              <button
+                class="btn btn-secondary btn-sm dropdown-toggle"
+                type="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                {{ status }}
+              </button>
+              <div class="dropdown-menu">
+                <a *ngFor="let activity of activities" class="dropdown-item">{{ activity }}</a>
+              </div>
+            </th>
+            <th>
+              <!--user switch-->
+              <a class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitches1" />
+                <label class="custom-control-label" for="customSwitches1"></label>
+              </a>
+            </th>
+          </tr>
+        </table>
       </div>
     </div>
+
+    <!-- 3rd participant -->
     <div class="media text-muted pt-3">
-      <svg
-        class="bd-placeholder-img mr-2 rounded"
-        width="32"
-        height="32"
-        xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="xMidYMid slice"
-        focusable="false"
-        role="img"
-        aria-label="Placeholder: 32x32"
-      >
-        <title>Placeholder</title>
-        <rect width="100%" height="100%" fill="#007bff"></rect>
-        <text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
-      </svg>
       <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-        <div class="d-flex justify-content-between align-items-center w-100">
-          <strong class="text-gray-dark">User3</strong>
-          <div class="custom-control custom-switch">
-            <input type="checkbox" class="custom-control-input" id="customSwitches2" />
-            <label class="custom-control-label" for="customSwitches2"></label>
-          </div>
-        </div>
-        <div class="btn-group">
-          <button
-            class="btn btn-secondary btn-sm dropdown-toggle"
-            type="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            Who am I
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item">Driver</a>
-            <a class="dropdown-item">Passenger</a>
-            <a class="dropdown-item">Without me</a>
-          </div>
-        </div>
+        <table style="width:100%">
+          <tr>
+            <th>
+              <!-- avatar -->
+              <svg
+                class="bd-placeholder-img mr-16 rounded"
+                width="32"
+                height="32"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+                role="img"
+                aria-label="Placeholder: 32x32"
+              >
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#007bff"></rect>
+                <text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
+              </svg>
+            </th>
+            <th>
+              <!--user name-->
+              <strong class="text-gray-dark">User name</strong>
+            </th>
+            <th>
+              <!--user activity-->
+              <button
+                class="btn btn-secondary btn-sm dropdown-toggle"
+                type="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                {{ status }}
+              </button>
+              <div class="dropdown-menu">
+                <a *ngFor="let activity of activities" class="dropdown-item">{{ activity }}</a>
+              </div>
+            </th>
+            <th>
+              <!--user switch-->
+              <a class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitches1" />
+                <label class="custom-control-label" for="customSwitches1"></label>
+              </a>
+            </th>
+          </tr>
+        </table>
       </div>
     </div>
+    <!-- 4th participant -->
+    <div class="media text-muted pt-3">
+      <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+        <table style="width:100%">
+          <tr>
+            <th>
+              <!-- avatar -->
+              <svg
+                class="bd-placeholder-img mr-16 rounded"
+                width="32"
+                height="32"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+                role="img"
+                aria-label="Placeholder: 32x32"
+              >
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#007bff"></rect>
+                <text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
+              </svg>
+            </th>
+            <th>
+              <!--user name-->
+              <strong class="text-gray-dark">User name</strong>
+            </th>
+            <th>
+              <!--user activity-->
+              <button
+                class="btn btn-secondary btn-sm dropdown-toggle"
+                type="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                {{ status }}
+              </button>
+              <div class="dropdown-menu">
+                <a *ngFor="let activity of activities" class="dropdown-item">{{ activity }}</a>
+              </div>
+            </th>
+            <th>
+              <!--user switch-->
+              <a class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitches1" />
+                <label class="custom-control-label" for="customSwitches1"></label>
+              </a>
+            </th>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <!--
     <div class="media text-muted pt-3">
       <svg
         class="bd-placeholder-img mr-2 rounded"
@@ -153,15 +251,13 @@
             aria-haspopup="true"
             aria-expanded="false"
           >
-            Who am I
-          </button>
+          {{ status }}
+        </button>
           <div class="dropdown-menu">
-            <a class="dropdown-item">Driver</a>
-            <a class="dropdown-item">Passenger</a>
-            <a class="dropdown-item">Without me</a>
+            <a *ngFor="let activity of activities" class="dropdown-item">{{ activity }}</a>
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
