@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Marcin",
+    "surname": "Szponder",
+    "licence": ["B", "A"]
+  },
+  {
+    "name": "Oskar",
+    "surname": "Szponder",
+    "licence": ["B"]
+  }
+]
