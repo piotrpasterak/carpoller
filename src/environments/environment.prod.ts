@@ -11,5 +11,14 @@ export const environment = {
   version: env.npm_package_version,
   serverUrl: 'https://api.chucknorris.io',
   defaultLanguage: 'en-US',
-  supportedLanguages: ['en-US', 'fr-FR']
+  supportedLanguages: ['en-US'],
+  firebaseConfig: {
+    apiKey: 'AIzaSyCcfmLG2y1ylNQYiFlw2eu_4vRTBFCl7Oo',
+    authDomain: 'carpooler-7e16a.firebaseapp.com',
+    databaseURL: 'https://carpooler-7e16a.firebaseio.com',
+    projectId: 'carpooler-7e16a',
+    storageBucket: 'carpooler-7e16a.appspot.com',
+    messagingSenderId: '799878032074',
+    appId: '1:799878032074:web:24881fb85fa1946c'
+  }
 };
