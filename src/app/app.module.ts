@@ -16,6 +16,7 @@ import { LoginModule } from './login/login.module';
 import { InfoModule } from './info/info.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { MapModule } from './info/map/map.module';
 
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
@@ -38,6 +39,7 @@ import { RegisterModule } from './register/register.module';
     LoginModule,
     RegisterModule,
     InfoModule,
+    MapModule,
     AngularFireModule,
     AngularFireAuthModule,
     AppRoutingModule // must be imported as the last module as it contains the fallback route
