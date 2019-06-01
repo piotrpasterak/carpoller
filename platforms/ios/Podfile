@@ -2,7 +2,7 @@
 
 platform :ios, '9.0'
 
-target 'Carpooler' do
-	project 'Carpooler.xcodeproj'
+target 'C:\Users\marti\OneDrive\UEK Marcin\Semestr II\Bogate Aplikacje Internetowe\carpooler2\carpooler\platforms\ios\Carpooler' do
+	project 'C:\Users\marti\OneDrive\UEK Marcin\Semestr II\Bogate Aplikacje Internetowe\carpooler2\carpooler\platforms\ios\Carpooler.xcodeproj'
 
 end
