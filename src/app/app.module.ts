@@ -21,6 +21,10 @@ import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire';
 import { RegisterModule } from './register/register.module';
+import { PositioningModule } from './positioning/positioning.module';
+import { CalendarModule } from './calendar/calendar.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   imports: [
@@ -38,8 +42,14 @@ import { RegisterModule } from './register/register.module';
     LoginModule,
     RegisterModule,
     InfoModule,
+    PositioningModule,
+    CalendarModule,
     AngularFireModule,
     AngularFireAuthModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      timeOut: 1000
+    }),
     AppRoutingModule // must be imported as the last module as it contains the fallback route
   ],
   declarations: [AppComponent],

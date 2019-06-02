@@ -15,3 +15,8 @@
 
 // Theme customization
 @import "theme/theme";
+
+/* Add application styles & imports to this file! */
+#toast-container > div {
+  opacity: 1;
+}

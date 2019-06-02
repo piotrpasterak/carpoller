@@ -84,7 +84,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
             "scripts": [],
-            "styles": ["src/main.scss"],
+            "styles": ["src/main.scss", "node_modules/ngx-toastr/toastr.css"],
             "assets": ["src/assets"]
           },
           "configurations": {

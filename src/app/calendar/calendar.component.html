@@ -1,0 +1,11 @@
+<button class="btn btn-secondary" type="button" aria-haspopup="true" aria-expanded="false" (click)="makeRequest()">
+  Calendar Request
+</button>
+
+<div *ngIf="loading">loading...</div>
+
+<div *ngFor="let item of holidaysList">
+  <div>Name: {{ item.name }}</div>
+  <div>Desc: {{ item.description }}</div>
+  <div>Date: {{ item.date.iso }}</div>
+</div>
