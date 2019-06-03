@@ -1,17 +1,16 @@
 .logo {
   width: 100px;
 }
-q {
-  font-style: italic;
-  font-size: 1.2rem;
-  quotes: "« " " »";
-}
+
 .home-img-fit {
   max-width: 100%;
   max-height: 100%;
 }
 .home-text {
   margin-left: 10px;
+}
+td {
+  border: 1px solid green;
 }
 select {
   float: right;
@@ -29,4 +28,5 @@ select {
 
 .home-jumbotron {
   background-color: transparent;
+  max-width: 400px;
 }
