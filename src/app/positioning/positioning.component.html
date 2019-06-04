@@ -1,13 +1,32 @@
-<button class="btn btn-secondary" type="button" aria-haspopup="true" aria-expanded="false">
-  Set current possition as home
-</button>
-<button class="btn btn-secondary" type="button" aria-haspopup="true" aria-expanded="false">
-  Set current possition as work
-</button>
-<button class="btn btn-secondary" type="button" (click)="onShowCurrentPosition()">
-  Show current postion
-</button>
-<button class="btn btn-secondary" type="button" aria-haspopup="true" aria-expanded="false">
-  Clear settings
-</button>
-<div id="map"></div>
+<div class="container-fluid">
+  <div class="container">
+    <table>
+      <tr>
+        <td>
+          <button class="cp-pos-button cp-pos-text" type="button" aria-haspopup="true" aria-expanded="false">
+            Set as home
+          </button>
+        </td>
+        <td>
+          <button class="cp-pos-button cp-pos-text" type="button" aria-haspopup="true" aria-expanded="false">
+            Set as work
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button class="cp-pos-button cp-pos-text" type="button" (click)="onShowCurrentPosition()">
+            Show current
+          </button>
+        </td>
+        <td>
+          <button class="cp-pos-button cp-pos-text" type="button" aria-haspopup="true" aria-expanded="false">
+            Clear settings
+          </button>
+        </td>
+      </tr>
+    </table>
+
+    <div class="cp-pos-map" id="map"></div>
+  </div>
+</div>

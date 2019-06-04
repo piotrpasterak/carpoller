@@ -1,6 +1,6 @@
 .cp-info-button {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 90px;
   margin-bottom: 2px;
   border: 2px solid white;
   border-radius: 4px;
@@ -16,7 +16,7 @@
   font-family: Arial;
 }
 
-.cp-info-table {
+table {
   width: 100%;
 }
 
@@ -26,5 +26,5 @@
 }
 
 .cp-info-jumbotron {
-  background-color: transparent;
+  background-color: transparent !important;
 }
