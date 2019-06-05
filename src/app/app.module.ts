@@ -25,6 +25,8 @@ import { PositioningModule } from './positioning/positioning.module';
 import { CalendarModule } from './calendar/calendar.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { ReportModule } from './report/report.module';
+import { SettingsModule } from './settings/settings.module';
 
 @NgModule({
   imports: [
@@ -42,6 +44,8 @@ import { ToastrModule } from 'ngx-toastr';
     LoginModule,
     RegisterModule,
     InfoModule,
+    SettingsModule,
+    ReportModule,
     PositioningModule,
     CalendarModule,
     AngularFireModule,
