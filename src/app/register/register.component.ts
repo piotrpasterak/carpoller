@@ -28,7 +28,7 @@ export class RegisterComponent implements OnInit, OnDestroy {
     private credentialsService: CredentialsService
   ) {
     if (this.credentialsService.isAuthenticated()) {
-      this.router.navigate(['/home']);
+      this.router.navigate(['/register']);
     }
   }
 
