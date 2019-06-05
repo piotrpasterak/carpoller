@@ -1,6 +1,6 @@
-.info-button {
-  width: 100px;
-  height: 100px;
+.cp-info-button {
+  width: 100%;
+  height: 90px;
   margin-bottom: 2px;
   border: 2px solid white;
   border-radius: 4px;
@@ -8,7 +8,7 @@
   box-shadow: 3px 3px 3px #ccc;
 }
 
-.info-text {
+.cp-info-text {
   color: white;
   margin: 5px auto 0px auto;
   font-size: 14pt;
@@ -16,15 +16,43 @@
   font-family: Arial;
 }
 
-.info-table {
+table {
   width: 100%;
 }
 
-.info-icon {
+.cp-info-icon {
   color: white;
   size: 30px;
 }
 
-.info-jumbotron {
-  background-color: transparent;
+.cp-info-jumbotron {
+  background-color: transparent !important;
+}
+
+.cp-info-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  background-color: #0073dd;
+  color: white;
+  text-align: center;
+}
+
+.info-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
 }
