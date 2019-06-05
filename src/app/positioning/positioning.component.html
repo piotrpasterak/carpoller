@@ -20,13 +20,18 @@
           </button>
         </td>
         <td>
-          <button class="cp-pos-button cp-pos-text" type="button" aria-haspopup="true" aria-expanded="false">
+          <button
+            class="cp-pos-button cp-pos-text"
+            type="button"
+            (click)="onClearSettings()"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
             Clear settings
           </button>
         </td>
       </tr>
     </table>
-
     <div class="cp-pos-map" id="map"></div>
   </div>
 </div>
