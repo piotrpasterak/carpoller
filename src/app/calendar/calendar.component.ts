@@ -18,10 +18,10 @@ export class CalendarComponent implements OnInit {
   ngOnInit() {}
 
   onSelect(event: Event) {
-    this.selectedCountry = event.target.value;
+    const selector = event.target as HTMLSelectElement;
+    const num = selector.value as unknown;
+    this.selectedCountry = num as number;
     this.holidaysList = [];
-
-    alert(this.selectedCountry);
   }
 
   makeRequest(): void {
