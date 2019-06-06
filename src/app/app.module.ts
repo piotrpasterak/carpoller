@@ -27,6 +27,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { ReportModule } from './report/report.module';
 import { SettingsModule } from './settings/settings.module';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 @NgModule({
   imports: [
@@ -51,6 +52,7 @@ import { SettingsModule } from './settings/settings.module';
     AngularFireModule,
     AngularFireAuthModule,
     BrowserAnimationsModule,
+    AngularFirestoreModule,
     ToastrModule.forRoot({
       timeOut: 1000
     }),
