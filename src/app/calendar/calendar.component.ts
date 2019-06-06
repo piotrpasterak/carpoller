@@ -9,17 +9,28 @@ import { HttpClient } from '@angular/common/http';
 export class CalendarComponent implements OnInit {
   holidaysdata: string;
   holidaysList: string[];
+  countries = [{ id: 1, name: 'US' }, { id: 2, name: 'PL' }, { id: 3, name: 'DE' }];
+  selectedCountry = 2;
   loading: boolean;
 
   constructor(private http: HttpClient) {}
 
   ngOnInit() {}
 
+  onSelect(event: Event) {
+    this.selectedCountry = event.target.value;
+    this.holidaysList = [];
+
+    alert(this.selectedCountry);
+  }
+
   makeRequest(): void {
     this.loading = true;
     this.http
       .get(
-        'https://calendarific.com/api/v2/holidays?&api_key=038a4d5f3c1553c33f1d637289f1b518cd92a5aef5f6cca1febd7a889c11a8f3&country=PL&year=2019&type=national',
+        'https://calendarific.com/api/v2/holidays?&api_key=038a4d5f3c1553c33f1d637289f1b518cd92a5aef5f6cca1febd7a889c11a8f3&country=' +
+          this.countries[this.selectedCountry - 1].name +
+          '&year=2019&type=national',
         { responseType: 'json' }
       )
       .subscribe(response => {

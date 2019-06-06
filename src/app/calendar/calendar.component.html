@@ -1,6 +1,14 @@
 <button class="btn btn-secondary" type="button" aria-haspopup="true" aria-expanded="false" (click)="makeRequest()">
-  Calendar Request
+  Set Calendar
 </button>
+
+<input id="userActivity3" class="custom-control-input" />
+<select class="mdb-select md-form colorful-select dropdown-primary" class="custom-control" (change)="onSelect($event)">
+  <option value="" disabled selected>Country</option>
+  <option value="1">US</option>
+  <option value="2">Polska</option>
+  <option value="3">Germany</option>
+</select>
 
 <div *ngIf="loading">loading...</div>
 
