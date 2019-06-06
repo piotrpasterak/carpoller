@@ -1,11 +1,35 @@
-<button class="btn btn-secondary" type="button" aria-haspopup="true" aria-expanded="false" (click)="makeRequest()">
-  Calendar Request
-</button>
-
-<div *ngIf="loading">loading...</div>
-
-<div *ngFor="let item of holidaysList">
-  <div>Name: {{ item.name }}</div>
-  <div>Desc: {{ item.description }}</div>
-  <div>Date: {{ item.date.iso }}</div>
+<div class="container-fluid">
+  <div class="container cp-cal-container">
+    <div class="row">
+      <div class="col col-form-label-sm">
+        <button class="cp-cal-button" type="button" aria-haspopup="true" aria-expanded="false" (click)="makeRequest()">
+          Generate
+        </button>
+      </div>
+      <div class="col col-form-label-sm">
+        <input id="userActivity3" class="custom-control-input" />
+        <select
+          class="mdb-select md-form colorful-select dropdown-primary"
+          class="custom-control"
+          (change)="onSelect($event)"
+        >
+          <option value="1">USA</option>
+          <option value="2">Polska</option>
+          <option value="3">Germany</option>
+        </select>
+      </div>
+    </div>
+    <div class="container cp-cal-scroll">
+      <div *ngIf="loading">loading...</div>
+      <div *ngFor="let item of holidaysList">
+        <div>Name: {{ item.name }}</div>
+        <div>Desc: {{ item.description }}</div>
+        <div>Date: {{ item.date.iso }}</div>
+      </div>
+      <div class="fas fa-undo-alt fa-lg cp-cal-return" [routerLink]="['/info']"></div>
+      <div class="cp-cal-footer">
+        ©2019 Carpooler
+      </div>
+    </div>
+  </div>
 </div>

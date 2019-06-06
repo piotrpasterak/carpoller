@@ -20,7 +20,13 @@
           </button>
         </td>
         <td>
-          <button class="cp-pos-button cp-pos-text" type="button" aria-haspopup="true" aria-expanded="false">
+          <button
+            class="cp-pos-button cp-pos-text"
+            type="button"
+            (click)="onClearSettings()"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
             Clear settings
           </button>
         </td>
@@ -29,4 +35,8 @@
 
     <div class="cp-pos-map" id="map"></div>
   </div>
+</div>
+<div class="fas fa-undo-alt fa-lg cp-pos-return" [routerLink]="['/info']"></div>
+<div class="cp-pos-footer">
+  ©2019 Carpooler
 </div>
