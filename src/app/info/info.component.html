@@ -1,30 +1,42 @@
-<div class="container-fluid">
-  <div class="jumbotron text-center">
+<div class="info-container">
+  <div class="info-box">
     <div class="container">
-      <div class="row">
-        <div class="col-sm">
-          <button type="button" class="btn btn-outline-light text-dark" routerLink="/set">
-            Settings
-          </button>
-        </div>
-        <div class="col-sm">
-          <button type="button" class="btn btn-outline-light text-dark" routerLink="/calendar">
-            Calendar
-          </button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm">
-          <button type="button" class="btn btn-outline-light text-dark" routerLink="/report">
-            Report
-          </button>
-        </div>
-        <div class="col-sm">
-          <button type="button" class="btn btn-outline-light text-dark" routerLink="/positioning">
-            Positioning
-          </button>
-        </div>
+      <div>
+        <table>
+          <tr>
+            <td>
+              <button
+                type="button"
+                class="cp-info-button"
+                [routerLink]="['/positioning']"
+                routerLinkActive="router-link-active"
+              >
+                <div><i class="cp-info-icon fas fa-map fa-2x"></i></div>
+                <div class="cp-info-text">Map</div>
+              </button>
+              <button type="button" class="cp-info-button">
+                <div><i class="cp-info-icon fas fa-chart-bar fa-2x"></i></div>
+                <div class="cp-info-text">Statistic</div>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button type="button" class="cp-info-button">
+                <div><i class="cp-info-icon fas fa-clock fa-2x"></i></div>
+                <div class="cp-info-text">Schedule</div>
+              </button>
+              <button type="button" class="cp-info-button" [routerLink]="['/calendar']">
+                <div><i class="cp-info-icon fas fa-calendar-alt fa-2x"></i></div>
+                <div class="cp-info-text">Calendar</div>
+              </button>
+            </td>
+          </tr>
+        </table>
       </div>
     </div>
   </div>
+</div>
+<div class="cp-info-footer">
+  ©2019 Carpooler
 </div>
