@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ITravel, ParticipantRole, Travel } from './Travel';
+import { ParticipantRole, Travel } from './Travel';
 
 export interface IMember {
   GetId(): string;
@@ -7,25 +7,20 @@ export interface IMember {
   GetNickname(): string;
   GetTravelPending(): Travel;
   GetTravelsHistory(): Travel[];
-  // GetCars(): string[];
 }
 
 @Injectable()
 export class Member implements IMember {
-  id: string;
-  email: string;
-  nickname: string;
-  travel_pending: Travel;
-  travelsHistory: Travel[];
-  //cars: string[];
+  public id: string;
+  public email: string;
+  public nickname: string;
+  public isNominated: boolean;
+  public travel_pending: Travel;
+  public travelsHistory: Travel[];
 
   GetId(): string {
     return this.id;
   }
-
-  // GetCars(): string[] {
-  //  return this._cars;
-  // }
 
   GetEmail(): string {
     return this.email;
@@ -33,6 +28,14 @@ export class Member implements IMember {
 
   GetNickname(): string {
     return this.nickname;
+  }
+
+  GetIsNominated(): boolean {
+    return this.isNominated;
+  }
+
+  SetIsNominated(state: boolean) {
+    this.isNominated = state;
   }
 
   GetTravelPending(): Travel {
@@ -43,7 +46,7 @@ export class Member implements IMember {
     return this.travelsHistory;
   }
 
-  CalculateTravelingScore(): number {
+  public CalculateTravelingScore(): number {
     var result = 0;
     var modifier = 1.05;
     var capacities: number[] = [5, 4, 3, 2];

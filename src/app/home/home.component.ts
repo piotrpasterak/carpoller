@@ -22,6 +22,16 @@ export class HomeComponent implements OnInit {
           ...e.payload.doc.data()
         } as Member;
       });
+
+      var dd = this.members[0].CalculateTravelingScore();
+      // let func = (a: Member , b:Member) => {return a. CalculateTravelingScore() - b.CalculateTravelingScore() ;}
+
+      // var potentialDriverId =
+      //   this.members.sort(func)[0].GetId();
+
+      // this.members.forEach(m => {
+      //   m.isNominated = (m.GetId() == potentialDriverId) ? true : false;
+      // })
     });
   }
 }
