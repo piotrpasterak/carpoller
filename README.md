@@ -3,6 +3,8 @@
 This project was generated with [ngX-Rocket](https://github.com/ngx-rocket/generator-ngx-rocket/)
 version 6.0.2
 
+# User manual
+
 # Getting started
 
 1. Go to project folder and install dependencies:
