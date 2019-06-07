@@ -3,230 +3,67 @@
   <div>
     <img src="assets/img/hyundai.jpg" class="home-img-fit" />
   </div>
-  <!-- 1st participant -->
-  <div class="media text-muted pt-2">
-    <div class="media-body pb-2 mb-0 small lh-125 border-bottom border-gray">
-      <table style="width:100%">
-        <tr>
-          <td>
-            <!-- avatar -->
-            <svg
-              class="bd-placeholder-img mr-16 rounded"
-              width="32"
-              height="32"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-              role="img"
-              aria-label="Placeholder: 32x32"
-            >
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#007bff"></rect>
-              <text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
-            </svg>
-          </td>
-          <td class="cp-home-text">
-            <!--user name-->
-            <strong class="text-gray-dark"><a>Marcin Szponder</a></strong>
-          </td>
-          <td>
-            <!--user activity-->
-            <form>
-              <span>
-                <input id="userActivity1" class="custom-control-input" />
-                <select
-                  class="mdb-select md-form colorful-select dropdown-primary"
-                  class="custom-control"
-                  for="userActivity1"
-                >
-                  <option value="" disabled selected>Role</option>
-                  <option value="1">Driver</option>
-                  <option value="2">Passanger</option>
-                </select>
-              </span>
-            </form>
-          </td>
-          <td>
-            <!--user switch-->
-            <div class="custom-control custom-switch">
-              <input type="checkbox" class="custom-control-input" id="customSwitches1" />
-              <label class="custom-control-label" for="customSwitches1"></label>
-            </div>
-            <a>i'm in</a>
-          </td>
-        </tr>
-      </table>
-    </div>
-  </div>
 
-  <!-- 2nd participant -->
-  <div class="media text-muted pt-3">
-    <div class="media-body pb-2 mb-0 small lh-125 border-bottom border-gray">
-      <table style="width:100%">
-        <tr>
-          <td>
-            <!-- avatar -->
-            <svg
-              class="bd-placeholder-img mr-16 rounded"
-              width="32"
-              height="32"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-              role="img"
-              aria-label="Placeholder: 32x32"
-            >
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#007bff"></rect>
-              <text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
-            </svg>
-          </td>
-          <td class="cp-home-text">
-            <!--user name-->
-            <strong class="text-gray-dark"><a>Piotr Pasterak</a></strong>
-          </td>
-          <td>
-            <!--user activity-->
-            <form>
-              <span>
-                <input id="userActivity2" class="custom-control-input" />
-                <select
-                  class="mdb-select md-form colorful-select dropdown-primary"
-                  class="custom-control"
-                  for="userActivity2"
-                >
-                  <option value="" disabled selected>Role</option>
-                  <option value="1">Driver</option>
-                  <option value="2">Passanger</option>
-                </select>
-              </span>
-            </form>
-          </td>
-          <td>
-            <!--user switch-->
-            <div class="custom-control custom-switch">
-              <input type="checkbox" class="custom-control-input" id="customSwitches2" />
-              <label class="custom-control-label" for="customSwitches2"></label>
-            </div>
-            <a>i'm in</a>
-          </td>
-        </tr>
-      </table>
+  <tr *ngFor="let member of members">
+    <!-- 1st participant -->
+    <div class="media text-muted pt-2">
+      <div class="media-body pb-2 mb-0 small lh-125 border-bottom border-gray">
+        <table style="width:100%">
+          <tr>
+            <td>
+              <!-- avatar -->
+              <svg
+                class="bd-placeholder-img mr-16 rounded"
+                width="32"
+                height="32"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+                role="img"
+                aria-label="Placeholder: 32x32"
+              >
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#007bff"></rect>
+                <text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
+              </svg>
+            </td>
+            <td class="cp-home-text">
+              <!--user name-->
+              <strong class="text-gray-dark"
+                ><a>{{ member.nickname }}</a></strong
+              >
+            </td>
+            <td>
+              <!--user activity-->
+              <form>
+                <span>
+                  <input id="userActivity1" class="custom-control-input" />
+                  <select
+                    class="mdb-select md-form colorful-select dropdown-primary"
+                    class="custom-control"
+                    for="userActivity1"
+                  >
+                    <option value="" disabled selected>Role</option>
+                    <option value="1">Driver</option>
+                    <option value="2">Passanger</option>
+                  </select>
+                </span>
+              </form>
+            </td>
+            <td>
+              <!--user switch-->
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitches1" />
+                <label class="custom-control-label" for="customSwitches1"></label>
+              </div>
+              <a>i'm in</a>
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
+  </tr>
+  <div class="cp-home-footer">
+    ©2019 Carpooler
   </div>
-
-  <!-- 3rd participant -->
-  <div class="media text-muted pt-3">
-    <div class="media-body pb-2 mb-0 small lh-125 border-bottom border-gray">
-      <table style="width:100%">
-        <tr>
-          <td>
-            <!-- avatar -->
-            <svg
-              class="bd-placeholder-img mr-16 rounded"
-              width="32"
-              height="32"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-              role="img"
-              aria-label="Placeholder: 32x32"
-            >
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#007bff"></rect>
-              <text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
-            </svg>
-          </td>
-          <td class="cp-home-text">
-            <!--user name-->
-            <strong class="text-gray-dark"><a>Jarosław Wojtyś</a></strong>
-          </td>
-          <td>
-            <!--user activity-->
-            <form>
-              <span>
-                <input id="userActivity3" class="custom-control-input" />
-                <select
-                  class="mdb-select md-form colorful-select dropdown-primary"
-                  class="custom-control"
-                  for="userActivity3"
-                >
-                  <option value="" disabled selected>Role</option>
-                  <option value="1">Driver</option>
-                  <option value="2">Passanger</option>
-                </select>
-              </span>
-            </form>
-          </td>
-          <td>
-            <!--user switch-->
-            <div class="custom-control custom-switch">
-              <input type="checkbox" class="custom-control-input" id="customSwitches3" />
-              <label class="custom-control-label" for="customSwitches3"></label>
-            </div>
-            <a>i'm in</a>
-          </td>
-        </tr>
-      </table>
-    </div>
-  </div>
-
-  <!-- 4th participant -->
-  <div class="media text-muted pt-3">
-    <div class="media-body pb-2 mb-0 small border-bottom border-gray">
-      <table style="width:100%">
-        <tr>
-          <td>
-            <!-- avatar -->
-            <svg
-              class="bd-placeholder-img mr-16 rounded"
-              width="32"
-              height="32"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-              role="img"
-              aria-label="Placeholder: 32x32"
-            >
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#007bff"></rect>
-              <text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
-            </svg>
-          </td>
-          <td class="cp-home-text">
-            <!--user name-->
-            <strong class="text-gray-dark"><a>Dawid Sikorski</a></strong>
-          </td>
-          <td>
-            <!--user activity-->
-            <form>
-              <span>
-                <input id="userActivity4" class="custom-control-input" />
-                <select
-                  class="mdb-select md-form colorful-select dropdown-primary"
-                  class="custom-control"
-                  for="userActivity4"
-                >
-                  <option value="" disabled selected>Role</option>
-                  <option value="1">Driver</option>
-                  <option value="2">Passanger</option>
-                </select>
-              </span>
-            </form>
-          </td>
-          <td>
-            <!--user switch-->
-            <div class="custom-control custom-switch">
-              <input type="checkbox" class="custom-control-input" id="customSwitches4" />
-              <label class="custom-control-label" for="customSwitches4"></label>
-            </div>
-            <a>i'm in</a>
-          </td>
-        </tr>
-      </table>
-    </div>
-  </div>
-</div>
-<div class="cp-home-footer">
-  ©2019 Carpooler
 </div>

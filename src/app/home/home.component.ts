@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { finalize } from 'rxjs/operators';
 
-import { QuoteService } from './quote.service';
+import { UsersService } from './users.service';
+import { Member } from '../core/domain/Member';
 
 @Component({
   selector: 'app-home',
@@ -9,22 +10,18 @@ import { QuoteService } from './quote.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  quote: string | undefined;
-  isLoading = false;
+  members: Member[];
 
-  constructor(private quoteService: QuoteService) {}
+  constructor(private userService: UsersService) {}
 
   ngOnInit() {
-    this.isLoading = true;
-    this.quoteService
-      .getRandomQuote({ category: 'dev' })
-      .pipe(
-        finalize(() => {
-          this.isLoading = false;
-        })
-      )
-      .subscribe((quote: string) => {
-        this.quote = quote;
+    this.userService.getMembers().subscribe(data => {
+      this.members = data.map(e => {
+        return {
+          id: e.payload.doc.id,
+          ...e.payload.doc.data()
+        } as Member;
       });
+    });
   }
 }

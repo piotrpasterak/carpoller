@@ -2,47 +2,45 @@ import { Injectable } from '@angular/core';
 import { ITravel, ParticipantRole, Travel } from './Travel';
 
 export interface IMember {
-  GetId(): number;
+  GetId(): string;
   GetEmail(): string;
   GetNickname(): string;
   GetTravelPending(): Travel;
   GetTravelsHistory(): Travel[];
-  GetCars(): string[];
+  // GetCars(): string[];
 }
 
 @Injectable()
 export class Member implements IMember {
-  constructor(
-    private _memberId: number,
-    private _email: string,
-    private _nickname: string,
-    private _travelPending: Travel,
-    private _travelsHistory: Travel[],
-    private _cars: string[]
-  ) {}
+  id: string;
+  email: string;
+  nickname: string;
+  travel_pending: Travel;
+  travelsHistory: Travel[];
+  //cars: string[];
 
-  GetId(): number {
-    return this._memberId;
+  GetId(): string {
+    return this.id;
   }
 
-  GetCars(): string[] {
-    return this._cars;
-  }
+  // GetCars(): string[] {
+  //  return this._cars;
+  // }
 
   GetEmail(): string {
-    return this._email;
+    return this.email;
   }
 
   GetNickname(): string {
-    return this._nickname;
+    return this.nickname;
   }
 
   GetTravelPending(): Travel {
-    return this._travelPending;
+    return this.travel_pending;
   }
 
   GetTravelsHistory(): Travel[] {
-    return this._travelsHistory;
+    return this.travelsHistory;
   }
 
   CalculateTravelingScore(): number {
@@ -62,10 +60,10 @@ export class Member implements IMember {
   }
 
   private TravelsWithRoleInCapOf(role: ParticipantRole, carCapacity: number): number {
-    return this._travelsHistory.filter(
+    return this.travelsHistory.filter(
       t =>
         t._participants.length == carCapacity &&
-        t._participants.filter(p => p.Member.GetId() == this._memberId && p.Role == role)
+        t._participants.filter(p => p.Member.GetId() == this.id && p.Role == role)
     ).length;
   }
 }
