@@ -98,4 +98,7 @@ export class PositioningComponent implements OnInit {
       this.markerSource.removeFeature(feature);
     });
   }
+
+  OnSetHome() {}
+  OnSetDestination() {}
 }
