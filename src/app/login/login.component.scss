@@ -1,7 +1,7 @@
 @import "src/theme/theme-variables";
 @import "~bootstrap/scss/mixins/_breakpoints";
 
-.login-container {
+.cp-login-container {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -10,7 +10,7 @@
   background-color: transparent;
 }
 
-.login-box {
+.cp-login-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,7 +20,7 @@
   background-color: transparent;
 }
 
-.register-img {
+.cp-register-img {
   background-size: auto 100%;
 }
 .ng-invalid.ng-touched:not(form) {

@@ -40,7 +40,7 @@ table {
   text-align: center;
 }
 
-.info-container {
+.cp-info-container {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -48,11 +48,12 @@ table {
   right: 0;
 }
 
-.info-box {
+.cp-info-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   min-height: 100%;
+  margin-top: 40px;
 }
