@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { finalize } from 'rxjs/operators';
 
-import { UsersService } from './users.service';
-import { Member } from '../core/domain/Member';
+import { Member, TravelParticipant } from '@app/core/models/Member';
+import { UsersTravelsRepository } from '@app/home/usersTravelsRepository';
+import { ParticipantRole, Travel } from '@app/core/models/Travel';
 
 @Component({
   selector: 'app-home',
@@ -11,27 +11,33 @@ import { Member } from '../core/domain/Member';
 })
 export class HomeComponent implements OnInit {
   members: Member[];
+  travel: Travel;
 
-  constructor(private userService: UsersService) {}
+  constructor(private travelsRepository: UsersTravelsRepository) {}
 
   ngOnInit() {
-    this.userService.getMembers().subscribe(data => {
+    this.travelsRepository.getMembers().subscribe(data => {
       this.members = data.map(e => {
-        return {
-          id: e.payload.doc.id,
-          ...e.payload.doc.data()
-        } as Member;
+        return new Member(
+          e.payload.doc.id,
+          e.payload.doc.get('email'),
+          e.payload.doc.get('nickname'),
+          e.payload.doc.get('score') as number,
+          ParticipantRole.Unknown,
+          false,
+          this.travelsRepository
+        );
       });
 
-      var dd = this.members[0].CalculateTravelingScore();
-      // let func = (a: Member , b:Member) => {return a. CalculateTravelingScore() - b.CalculateTravelingScore() ;}
+      var potentialDriverId = this.members.sort(m => m.score)[0].id;
 
-      // var potentialDriverId =
-      //   this.members.sort(func)[0].GetId();
-
-      // this.members.forEach(m => {
-      //   m.isNominated = (m.GetId() == potentialDriverId) ? true : false;
-      // })
+      this.members.forEach(m => {
+        m.SetIsNominated(m.id == potentialDriverId ? true : false);
+      });
     });
+  }
+
+  setRoleOnMember(member: Member, role: number) {
+    member.SetRole(role);
   }
 }

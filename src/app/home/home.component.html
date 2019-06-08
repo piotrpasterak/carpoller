@@ -44,8 +44,8 @@
                     for="userActivity1"
                   >
                     <option value="" disabled selected>Role</option>
-                    <option value="1">Driver</option>
-                    <option value="2">Passanger</option>
+                    <option value="1" (select)="setRoleOnMember(member, 1)">Driver</option>
+                    <option value="2" (select)="setRoleOnMember(member, 1)">Passanger</option>
                   </select>
                 </span>
               </form>
