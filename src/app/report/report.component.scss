@@ -18,9 +18,11 @@ select {
   border-radius: 0.4rem;
   max-width: 120px;
 }
-table,th,tr,td{
+table,
+th,
+tr,
+td {
   border-style: solid, black;
-
 }
 
 .rep-jumbotron {
@@ -49,6 +51,6 @@ table,th,tr,td{
   text-align: center;
 }
 
-.cp-rep-color{
-color:red;
+.cp-rep-color {
+  color: red;
 }

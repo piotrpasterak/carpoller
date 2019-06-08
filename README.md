@@ -5,6 +5,8 @@ version 6.0.2
 
 # User manual
 
+- [Manual of the app](docs/MANUAL.md)
+
 # Getting started
 
 1. Go to project folder and install dependencies:
