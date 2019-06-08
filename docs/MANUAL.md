@@ -4,7 +4,7 @@ This app is used to share a car for regular trips, for example commuting to work
 
 First of all you have to register your account, therefore please go to the Register button at the bottom of the app
 
-![alt text](docs/img/carpooler login page.jpg "Login page")
+![Login page](docs/img/carpooler login page.jpg)
 
 Provide your email address and password
 
