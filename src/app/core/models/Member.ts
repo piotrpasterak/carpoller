@@ -1,51 +1,66 @@
 import { Injectable } from '@angular/core';
-import { ITravelParticipant, ParticipantRole, Travel } from './Travel';
-import { UsersTravelsRepository } from '@app/home/usersTravelsRepository';
+import { ParticipantRole, Travel } from './Travel';
+import { UsersTravelsRepository } from '@app/core/usersTravelsRepository';
 
-export class TravelParticipant implements ITravelParticipant {
-  public member_id: string;
-  public role: ParticipantRole;
-}
-
+@Injectable()
 export class Member {
+  private finishedTravels: Travel[];
+  private role: ParticipantRole;
+  private skippedNomination: boolean;
+
   constructor(
     public id: string,
     public email: string,
     public nickname: string,
+    public isNominated: boolean,
     public score: number,
-    private role: ParticipantRole,
-    private isNominated: boolean,
-    private travelsRepository: UsersTravelsRepository
+    private usersTravelsRepository: UsersTravelsRepository
   ) {
-    this.travelsRepository.getTravels().subscribe(data => {
-      var memberTravels = data.map(e => {
-        return new Travel(
-          e.payload.doc.id,
-          e.payload.doc.get('isLocked') as boolean,
-          e.payload.doc.get('startTimeStamp'),
-          e.payload.doc.get('arrivalTimeStamp'),
-          e.payload.doc.get('participants') as TravelParticipant[]
-        );
-      });
-
-      this.score = this.CalculateTravelingScore(memberTravels);
-    });
+    this.usersTravelsRepository.getTravels().subscribe(t => (this.finishedTravels = t));
   }
 
-  public GetIsNominated() {
+  GetId(): string {
+    return this.id;
+  }
+
+  GetEmail(): string {
+    return this.email;
+  }
+
+  GetNickname(): string {
+    return this.nickname;
+  }
+
+  GetIsNominated(): boolean {
     return this.isNominated;
   }
 
-  public SetIsNominated(state: boolean) {
+  SetIsNominated(state: boolean) {
     this.isNominated = state;
   }
 
-  public GetRole(): ParticipantRole {
+  GetScore(): number {
+    return this.score;
+  }
+
+  GetRole(): ParticipantRole {
     return this.role;
   }
 
-  public SetRole(role: ParticipantRole) {
+  SetRole(role: ParticipantRole) {
     this.role = role;
+  }
+
+  SkipNomination() {
+    this.skippedNomination = true;
+  }
+
+  DidSkipnomination() {
+    return this.skippedNomination;
+  }
+
+  FinishTrip() {
+    this.score = this.CalculateTravelingScore(this.finishedTravels);
   }
 
   private CalculateTravelingScore(travels: Travel[]): number {
