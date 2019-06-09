@@ -11,6 +11,10 @@ barter settlement. It is hard to manage with out appropiate tool. Carpooler appl
 
 - [Prototype](docs/proto.md)
 
+# Prototype
+
+1. To see the prototype, please follow the link https://pr.to/ROFLAS/
+
 # Getting started
 
 1. Go to project folder and install dependencies:
