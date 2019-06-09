@@ -17,7 +17,7 @@ barter settlement. It is hard to manage with out appropiate tool. Carpooler appl
 
 # Project management board
 
-1. Please follow the link(https://github.com/piotrpasterak/carpooler/projects/2)
+1. Please follow the link: https://github.com/piotrpasterak/carpooler/projects/2
 
 # Getting started
 
