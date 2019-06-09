@@ -15,11 +15,13 @@ export class HomeComponent implements OnInit {
   travelFree: Travel;
   loggedMember: Member;
 
-  constructor(private usersTravelsRepository: UsersTravelsRepository, private credsService: CredentialsService) {
-    this.usersTravelsRepository.getMember(credsService.credentials.username);
-  }
+  constructor(private usersTravelsRepository: UsersTravelsRepository, private credsService: CredentialsService) {}
 
   ngOnInit() {
+    this.usersTravelsRepository
+      .getMember(this.credsService.credentials.username) // email
+      .subscribe(m => (this.loggedMember = m));
+
     this.usersTravelsRepository.getMembers().subscribe(m => (this.members = m));
 
     this.usersTravelsRepository.getFreeTravel().subscribe(t => {
@@ -28,7 +30,7 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  nominateDriver() {
+  private nominateDriver() {
     if (
       this.travelFree.participants &&
       !(this.travelFree.participants.filter(p => p.role == ParticipantRole.Driver).length > 0)

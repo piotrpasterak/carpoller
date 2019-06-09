@@ -17,7 +17,7 @@ export const environment = {
   defaultLanguage: 'en-US',
   supportedLanguages: ['en-US', 'fr-FR'],
   firebaseConfig: {
-    apiKey: 'AIzaSyCcfmLG2y1ylNQYiFlw2eu_4vRTBFCl7Oo',
+    apiKey: '',
     authDomain: 'carpooler-7e16a.firebaseapp.com',
     databaseURL: 'https://carpooler-7e16a.firebaseio.com',
     projectId: 'carpooler-7e16a',
