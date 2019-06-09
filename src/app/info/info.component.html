@@ -1,42 +1,44 @@
-<div class="jumbotron cp-info-jumbotron">
-  <div class="cp-info-box">
-    <div class="container">
-      <div>
-        <table>
-          <tr>
-            <td>
-              <button
-                type="button"
-                class="cp-info-button"
-                [routerLink]="['/positioning']"
-                routerLinkActive="router-link-active"
-              >
-                <div><i class="cp-info-icon fas fa-map fa-2x"></i></div>
-                <div class="cp-info-text">Map</div>
-              </button>
-              <button type="button" class="cp-info-button" [routerLink]="['/report']">
-                <div><i class="cp-info-icon fas fa-chart-bar fa-2x"></i></div>
-                <div class="cp-info-text">Report</div>
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <button type="button" class="cp-info-button" [routerLink]="['/set']">
-                <div><i class="cp-info-icon fas fa-clock fa-2x"></i></div>
-                <div class="cp-info-text">Schedule</div>
-              </button>
-              <button type="button" class="cp-info-button" [routerLink]="['/calendar']">
-                <div><i class="cp-info-icon fas fa-calendar-alt fa-2x"></i></div>
-                <div class="cp-info-text">Calendar</div>
-              </button>
-            </td>
-          </tr>
-        </table>
+<div class="container-fluid">
+  <div class="jumbotron cp-info-jumbotron">
+    <div class="cp-info-box">
+      <div class="container">
+        <div>
+          <table>
+            <tr>
+              <td>
+                <button
+                  type="button"
+                  class="cp-info-button"
+                  [routerLink]="['/positioning']"
+                  routerLinkActive="router-link-active"
+                >
+                  <div><i class="cp-info-icon fas fa-map fa-2x"></i></div>
+                  <div class="cp-info-text">Map</div>
+                </button>
+                <button type="button" class="cp-info-button" [routerLink]="['/report']">
+                  <div><i class="cp-info-icon fas fa-chart-bar fa-2x"></i></div>
+                  <div class="cp-info-text">Report</div>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button type="button" class="cp-info-button" [routerLink]="['/set']">
+                  <div><i class="cp-info-icon fas fa-clock fa-2x"></i></div>
+                  <div class="cp-info-text">Schedule</div>
+                </button>
+                <button type="button" class="cp-info-button" [routerLink]="['/calendar']">
+                  <div><i class="cp-info-icon fas fa-calendar-alt fa-2x"></i></div>
+                  <div class="cp-info-text">Calendar</div>
+                </button>
+              </td>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<div class="cp-info-footer">
-  ©2019 Carpooler
+  <div class="cp-info-footer">
+    ©2019 Carpooler
+  </div>
 </div>
