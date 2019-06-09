@@ -1,8 +1,5 @@
 # Carpooler
 
-This project was generated with [ngX-Rocket](https://github.com/ngx-rocket/generator-ngx-rocket/)
-version 6.0.2
-
 **People oftem commuting to work from other cities( for example from Tarnow to Krakow). In order to optimize the costs travelers(buddies from the job or friends) join in groups and travel by one car together. They are changing cars and roles from driver to passanger. It is important to change drivers and cars. The service is
 barter settlement. It is hard to manage with out appropiate tool. Carpooler application is designed to fullfill the need those people may have.**
 
