@@ -77,11 +77,22 @@ export class PositioningComponent implements OnInit {
     }
   }
   onShowCurrentPosition() {
+    const options = {
+      enableHighAccuracy: true,
+      timeout: 5000
+    };
+
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(position => {
-        this.currLat = position.coords.latitude;
-        this.currLng = position.coords.longitude;
-      });
+      navigator.geolocation.getCurrentPosition(
+        position => {
+          this.currLat = position.coords.latitude;
+          this.currLng = position.coords.longitude;
+        },
+        error => {
+          alert('ERROR: ' + error.message);
+        },
+        options
+      );
     } else {
       alert('Geolocation is not supported!.');
     }
