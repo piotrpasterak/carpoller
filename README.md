@@ -3,6 +3,10 @@
 This project was generated with [ngX-Rocket](https://github.com/ngx-rocket/generator-ngx-rocket/)
 version 6.0.2
 
+# Prototype
+
+1. To see the prototype, please follow the link https://pr.to/ROFLAS/
+
 # Getting started
 
 1. Go to project folder and install dependencies:
