@@ -3,9 +3,6 @@
   <div>
     <img src="assets/img/hyundai.jpg" class="home-img-fit" />
   </div>
-  <tr>
-    <td>{{ this.travelFree.id }}</td>
-  </tr>
   <tr *ngFor="let member of members">
     <!-- 1st participant -->
     <div class="media text-muted pt-2">
@@ -46,24 +43,26 @@
                     for="userActivity1"
                   >
                     <option value="" disabled selected>Role</option>
-                    <option value="1" (click)="setRoleOnMember(member, 1)">Driver</option>
-                    <option value="2" (select)="setRoleOnMember(member, 2)">Passanger</option>
+                    <option value="1">Driver</option>
+                    <option value="2">Passanger</option>
                   </select>
                 </span>
               </form>
             </td>
-            <td>
+            <td <td *ngIf="loggedMember.id == member.id">
+              >
               <!--user switch-->
               <div class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="customSwitches1" />
                 <label class="custom-control-label" for="customSwitches1"></label>
               </div>
-              <a (click)="setParticipation(member, 1)">i'm in</a>
+              <a>i'm in</a>
             </td>
             <td><a *ngIf="member.GetIsNominated()">Nominated</a></td>
           </tr>
         </table>
 
+        <!--
         <button *ngIf="loggedMember.GetRole() == 1" (click)="beginTravel()" class="btn-primary">Begin trip.</button>
         <button
           *ngIf="loggedMember.GetRole() == 1 && travelFree.isFinished"
@@ -72,6 +71,7 @@
         >
           End trip.
         </button>
+        -->
       </div>
     </div>
   </tr>

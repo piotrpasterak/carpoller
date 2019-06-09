@@ -30,8 +30,8 @@ export class UsersTravelsRepository {
       );
   }
 
-  getMember(memberUserName: string) {
-    return this.getMembers().pipe(map(m => m.filter(mb => mb.nickname == memberUserName)[0]));
+  getMember(email: string) {
+    return this.getMembers().pipe(map(m => m.filter(mb => mb.email == email)[0]));
   }
 
   updateMember(member: Member) {
