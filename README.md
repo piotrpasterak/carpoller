@@ -11,9 +11,13 @@ barter settlement. It is hard to manage with out appropiate tool. Carpooler appl
 
 - [Prototype](docs/proto.md)
 
-# Prototype
+# Use case diagram
 
-1. To see the prototype, please follow the link https://pr.to/ROFLAS/
+- [Use Case Diagram](docs/diagram.md)
+
+# Project management board
+
+1. Please follow the link ![link](https://github.com/piotrpasterak/carpooler/projects/2)
 
 # Getting started
 
